@@ -1,19 +1,21 @@
 <template>
-  <div class="example">{{ msg }}</div>
+  <div class="chatapp">
+    <thread-section></thread-section>
+    <message-section></message-section>
+  </div>
 </template>
 
 <script>
+  import ThreadSection from './ThreadSection.vue';
+  import MessageSection from './MessageSection.vue';
+
   export default {
-    data() {
-      return {
-        msg: 'Hello world!'
-      }
+    name: 'App',
+    components: {
+      ThreadSection,
+      MessageSection
     }
   }
 </script>
 
-<style>
-  .example {
-    color: red;
-  }
-</style>
+<style src="../css/chat.css"></style>
